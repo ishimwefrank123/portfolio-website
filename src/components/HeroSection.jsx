@@ -20,10 +20,8 @@ export const HeroSection = () => {
 
 
         <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-          I am a backend developer skilled in building robust systems with different technologies, 
-          complemented by frontend development using React to create responsive user interfaces. 
-          I also explore data science, applying Python libraries to analyze and visualize data, 
-          making me versatile in developing both practical applications and data-driven solutions.
+          I am a passionate software and web developer with experience in building responsive, user-friendly, and scalable applications. 
+          I enjoy turning ideas into functional solutions using modern technologies and constantly learning to improve my craft.
         </p>
 
         <div className="pt-4 opacity-0 animate-fade-in-delay-4">
