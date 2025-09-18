@@ -32,9 +32,17 @@ const skills = [
   { name: "Matplotlib", level: 80, category: "datascience" },
   { name: "Seaborn", level: 80, category: "datascience" },
   
+   // Mobile Development
+  { name: "Flutter", level: 80, category: "mobile" },
+  { name: "Dart", level: 70, category: "mobile" },
+  
+  
+  // Mobile Tools
+  { name: "Android Studio", level: 80, category: "tools" },
+  { name: "Firebase", level: 75, category: "tools" },
 ];
 
-const categories = ["all","frontend", "backend","datascience","tools"]
+const categories = ["all","frontend", "backend","datascience","tools","mobile"]
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all")
