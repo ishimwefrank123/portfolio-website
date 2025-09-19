@@ -8,7 +8,7 @@ const projects = [
     image: "/projects/project1.jpg",
     tags: ["Express","Typescript","PostgreSql","React","Prisma ORM"],
     demoUrl: "#",
-    githubUrl: "#"
+    githubUrl: "https://github.com/ishimwefrank123/nexamart-project.git"
   },
    {
     id:2,
@@ -17,7 +17,7 @@ const projects = [
     image: "/projects/projec2.png",
     tags: ["Express","MongoDB","React"],
     demoUrl: "#",
-    githubUrl: "#"
+    githubUrl: "https://github.com/ishimwefrank123/book-app-inventory.git"
   },
    {
     id:3,
@@ -26,7 +26,7 @@ const projects = [
     image: "/projects/project3.png",
     tags: ["Express","MongoDB","React"],
     demoUrl: "#",
-    githubUrl: "#"
+    githubUrl: "https://github.com/ishimwefrank123/hotel-booking.git"
   },
 ]
 

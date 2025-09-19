@@ -3,23 +3,55 @@ import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Send, Twitch, Twitt
 import { cn } from "../lib/utils"
 import { useToast } from "../hooks/use-toast"
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 export const ContactSection = () => {
   const {toast} = useToast();
   const [isSubmitting,setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e) => {
+  emailjs.init("U0uTCdQ-XBreZ0rcq");
+
+  const handleSubmit = async(e) => {
     e.preventDefault()
 
     setIsSubmitting(true);
 
-    setTimeout(()=>{
+    // setTimeout(()=>{
+    //   toast({
+    //     title: "Message sent!",
+    //     description: "Thank you for your message. I'll get back to you soon."
+    //   });
+    //   setIsSubmitting(false);
+    // }, 1500);
+    try {
+      // Send email using EmailJS
+      const result = await emailjs.sendForm(
+        'service_euobd3w', 
+        'template_8ftnfej', 
+        e.target,
+        'U0uTCdQ-XBreZ0rcq'
+      );
+      
+      console.log('Email successfully sent!', result.text);
+      
       toast({
         title: "Message sent!",
         description: "Thank you for your message. I'll get back to you soon."
       });
+      
+      // Reset the form
+      e.target.reset();
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      
+      toast({
+        title: "Error",
+        description: "Sorry, there was a problem sending your message. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   }
   return (
   <section
@@ -87,10 +119,10 @@ export const ContactSection = () => {
           <div className="pt-8">
             <h4 className="font-medium mb-4">Connect With Me</h4>
             <div className="flex space-x-4 justify-center">
-              <a href="#" target="_blank">
+              <a href="https://www.linkedin.com/in/frank-ishimwe-2634ba284/" target="_blank">
                 <Linkedin/>
               </a>
-              <a href="#" target="_blank">
+              <a href="https://x.com/ishimwefrank147" target="_blank">
                 <Twitter/>
               </a>
               <a href="#" target="_blank">
